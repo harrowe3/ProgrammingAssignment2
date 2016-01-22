@@ -3,6 +3,7 @@
 
 ## makeCacheMatrix() takes a matrix as an argument, and creates a list of 
 ## functions that are used by cacheSolve().
+
 makeCacheMatrix <- function(x = matrix()) {
         s <- NULL
         set <- function(y) {
@@ -22,6 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## If that's the case, it prints "getting cached data" to the console, 
 ## and the value of the stored inverse matrix is returned. If not, it computes 
 ## and returns the inverse matrix, and caches the result using setsolve.
+
 cacheSolve <- function(x, ...) {
         s <- x$getsolve()
         if(!is.null(s)) {
